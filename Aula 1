@@ -1,1 +1,6 @@
+- Comandos builting do bash:
+  Para vermos a lista completa de comandos builting podemos usar o comando (builting):
+    :$ help
 
+  Tambem pode ser usado o comando seguido de um comando especifico para acessar uma manual resumido, caso
+    esse comando não seja builting será exibido uma mensagem de erro
