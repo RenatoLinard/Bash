@@ -1,87 +1,53 @@
-# Introdução ao Shell, Terminais e Consoles, Prompt de Comandos, Tipos de Shell e Comandos Builtin
+# Anotações sobre Shells, Terminais, Prompt de Comandos e Tipos de Shells
 
-Neste texto, vamos explorar o mundo do shell, a interface técnica e descontraída que nos permite interagir com o sistema operacional. Mesmo que você não seja um programador experiente, se já usou o terminal no Linux, Mac ou console no Windows, você usou um shell.
+Ei pessoal, aqui estão algumas anotações sobre shells, terminais, prompts de comandos e tipos de shells. Vamos dar uma olhada nos detalhes técnicos, mas de forma descontraída. 😎
 
 ## 1.1 - O que é o 'shell'
 
-Mesmo que você nunca tenha criado nenhum script, mesmo que não saiba nada de programação, se você usa o terminal ou o console de qualquer distribuição GNU/Linux, ou o terminal do seu Mac, ou até o console do Windows, você já está utilizando algum tipo de shell.
+Então, mesmo que você não seja um guru da programação, se você já usou o terminal no Linux, Mac ou o console no Windows, você está lidando com algum tipo de shell. O shell é como uma camada que envolve o sistema operacional, agindo como uma "casca". Sua principal função é criar uma interface entre você, o usuário, e o núcleo do sistema, conhecido como kernel. O kernel cuida da parte física do seu computador, enquanto o shell lida com as instruções dos programas e, claro, com as suas.
 
-**Exemplo de comando:**
-```shell
-$ ls -l
-```
-No exemplo acima, "ls -l" é um comando executado no shell para listar os arquivos no diretório atual.
+**Exemplo técnico:** Se você executar `ls -l`, você está usando o shell para listar os arquivos no diretório.
 
 ## 1.2 - Terminais e consoles
 
-Nos tempos mais remotos da computação, a comunicação física entre o usuário e o kernel era feita através da entrada de comandos por fitas ou cartões perfurados, com ou sem a ajuda de um teclado, e do recebimento de respostas através de uma impressora.
+No passado, a comunicação entre o usuário e o kernel era feita através de cartões perfurados ou fitas. Com o tempo, as coisas evoluíram, e os consoles e terminais eletrônicos se tornaram virtuais. Agora, quando falamos em "console" ou "terminal", estamos falando sobre a virtualização em software (graças ao kernel) dos antigos terminais físicos.
 
-**Exemplo de comando:**
-```shell
-$ echo "Hello, World!"
-```
-No comando acima, "echo" é usado para exibir "Hello, World!" no terminal.
+**Exemplo técnico:** Quando você executa o comando `echo "Hello, World!"`, está usando o shell para exibir uma mensagem no terminal.
 
 ## 1.3 - O 'prompt' de comandos
 
-Assim que você faz o login no console ou abre um terminal no seu ambiente gráfico, o shell é iniciado e nos mostra um ou mais caracteres e um cursor no local onde serão exibidos os comandos digitados por nós. Este ponto onde aparece o cursor é o prompt de comandos. Sua função é indicar que o shell está "pronto" (daí prompt) para receber comandos. Na verdade, podemos dizer que acessar o prompt de comandos é o mesmo que acessar o shell.
+Assim que você entra no console ou abre um terminal, o shell é iniciado, e você vê um prompt de comandos. É o local onde você digita seus comandos. Acessar o prompt de comandos é essencialmente acessar o shell.
 
-**Exemplo de comando:**
-```shell
-$ cd /home/user/documents
-```
-Nesse exemplo, o comando "cd" é usado para mudar o diretório atual para "/home/user/documents".
+**Exemplo técnico:** Ao usar comandos como `cd /home/user/documents`, você está navegando entre diretórios no shell.
 
 ## 1.4 - A aparência do 'prompt'
 
-Dependendo do sistema operacional e das customizações feitas, o prompt pode apresentar várias informações, mas o que importa para nós por enquanto são os símbolos mostrados imediatamente antes do cursor.
+O prompt pode variar de acordo com o sistema e as configurações. Normalmente, você verá símbolos como `$`, `%`, ou `#` antes do cursor. Cada símbolo tem um significado. O `$` indica que você está logado como usuário comum, o `#` indica que você está como usuário administrativo (o temido root).
 
-**Exemplo de prompt:**
-```
-user@machine:~$
-```
+**Exemplo técnico:** O prompt `user@machine:~$` mostra o nome de usuário, o nome da máquina, o diretório atual e o tipo de usuário.
 
 ## 1.5 - Shell interativo e não-interativo
 
-Quando abrimos um terminal e começamos a digitar comandos, nós estamos utilizando o shell de forma interativa. No modo interativo, nós entramos com um comando, o shell processa esse comando, nos dá uma resposta, nós vemos a resposta, pensamos e decidimos o que fazer em seguida.
+Quando você está no terminal, está interagindo diretamente com o shell. Você digita um comando, o shell processa, você vê a resposta e decide o próximo passo. Mas você também pode usar o shell de forma não interativa, o que é útil quando você precisa executar uma série de comandos em sequência.
 
-**Exemplo de shell não-interativo:**
-```shell
-$ sh myscript.sh
-```
+**Exemplo técnico:** Para executar um script, você pode usar o comando `sh myscript.sh`.
 
 ## 1.6 - Tipos de shell
 
-Existem vários tipos de shell, figurando entre eles:
+Existem vários tipos de shell por aí, como o Bourne Shell, Bourne-Again Shell, Almquist Shell, Debian Almquist Shell, KornShell e Z Shell, entre outros. Cada um tem suas próprias características e comandos.
 
-- Bourne Shell (sh)
-- Bourne-Again Shell (bash)
-- Almquist Shell (ash)
-- Debian Almquist Shell (dash)
-- KornShell (ksh)
-- Z Shell (zsh)
-
-**Exemplo de mudança de shell:**
-```shell
-$ chsh -s /bin/bash
-```
+**Exemplo técnico:** Para mudar o shell padrão, você pode usar `chsh -s /bin/bash`.
 
 ## 1.7 - Os comandos builtin do Bash
 
-O bash possui um farto conjunto de comandos internos chamados de builtin, e nós utilizamos alguns deles bem frequentemente no terminal, como é o caso do comando cd, usado para mudar de diretório.
+O Bash possui muitos comandos internos, chamados de "builtin". Alguns deles são frequentemente usados no terminal. O comando `cd`, por exemplo, é um comando interno que permite mudar de diretório.
 
-**Exemplo de comando builtin:**
-```shell
-$ cd /path/to/directory
-```
+**Exemplo técnico:** Para navegar entre diretórios, use o comando `cd /path/to/directory`.
 
 ## 1.8 - Como saber que tipo de shell você está utilizando
 
-Você pode descobrir o shell atual de duas maneiras. Uma é usando o comando 'echo $0' no modo interativo, mas ele não funciona dentro de scripts. Outra é usando 'echo $SHELL', que retorna o caminho do shell configurado para o usuário e funciona em scripts.
+Você pode verificar qual shell está em uso de algumas maneiras. Uma delas é usar o comando `echo $0` no modo interativo. Mas lembre-se de que isso não funciona dentro de scripts. Outra maneira é verificar a variável de ambiente `$SHELL`, que armazena o caminho do shell configurado para o usuário.
 
-**Exemplo de comando para verificar o shell atual:**
-```shell
-$ echo $SHELL
-```
+**Exemplo técnico:** Para verificar o shell atual, use o comando `echo $SHELL`.
 
-Lembre-se de que essas são as formas mais simples de identificar o shell e que existem outras maneiras mais avançadas.
+Então, pessoal, essas são algumas anotações sobre shells e terminais. Espero que isso ajude você a entender melhor como interagimos com nossos sistemas! 😄✨
