@@ -1,6 +1,6 @@
 # Anotações sobre Shells, Terminais, Prompt de Comandos e Tipos de Shells
 
-Ei pessoal, aqui estão algumas anotações sobre shells, terminais, prompts de comandos e tipos de shells. Vamos dar uma olhada nos detalhes técnicos, mas de forma descontraída. 😎
+Ei pessoal, aqui estão algumas anotações sobre shells, terminais, prompts de comandos e tipos de shells. 😎
 
 ## 1.1 - O que é o 'shell'
 
