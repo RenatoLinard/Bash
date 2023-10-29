@@ -1,7 +1,7 @@
 # Bash
-# Curso Básico de Bash - Anotações
+# Anotações Básicas de Bash - Anotações Pessoais
 
-Este repositório contém anotações detalhadas e informações provenientes do "Curso Básico de Bash" ministrado por Blau Araújo. O curso é gratuito e oferece uma qualidade de ensino e estrutura comparáveis a cursos pagos. Se você acha que o curso é valioso e deseja expressar sua gratidão, considere apoiar financeiramente o instrutor de acordo com sua generosidade.
+Este repositório contém anotações pessoais e informações provenientes que retirei do "Curso Básico de Bash" ministrado por Blau Araújo. O curso é gratuito e oferece uma qualidade de ensino e estrutura comparáveis a cursos pagos. Se você acha que o curso é valioso e deseja expressar sua gratidão, considere apoiar financeiramente o instrutor de acordo com sua generosidade.
 
 ## Sobre o Curso
 
