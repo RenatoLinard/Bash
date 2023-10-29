@@ -9,7 +9,7 @@ O "Curso Básico de Bash" é uma oportunidade imperdível para aprender os funda
 
 ### Link do Curso
 
-Você pode acessar o curso diretamente no site de Blau Araújo: [Curso Básico de Bash](https://blauaraujo.com/curso-basico-de-bash/).
+Você pode acessar o curso diretamente no site de Blau Araújo: [Curso Básico de Bash](https://debxp.org/cbpb/).
 
 ## Mais Recursos
 
