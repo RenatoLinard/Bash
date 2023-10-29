@@ -1,6 +1,6 @@
-# Criando Scripts em Bash 
+# Aula 3 - Nosso Primeiro Script
 
-Aqui estão algumas anotações pessoais sobre a criação de scripts em Bash. Vamos dar uma olhada nas etapas e considerações importantes para facilitar o entendimento, especialmente para quem está começando.
+Aqui estão algumas anotações pessoais sobre a terceira aula do curso básico de bash.
 
 ## Etapas para Criar um Script
 
