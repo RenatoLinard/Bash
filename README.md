@@ -9,7 +9,7 @@ O "Curso Básico de Bash" é uma oportunidade imperdível para aprender os funda
 
 ### Link do Curso
 
-Você pode acessar o curso diretamente no site de Blau Araújo: [Curso Básico de Bash](https://debxp.org/cbpb/).
+Você pode acessar o curso diretamente no site DEBXP COMUNIDADE: [Curso Básico de Bash](https://debxp.org/cbpb/).
 
 ## Mais Recursos
 
