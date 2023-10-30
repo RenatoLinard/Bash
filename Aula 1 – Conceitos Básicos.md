@@ -1,4 +1,4 @@
-# O que é o Shell/Bash?
+# O que é o Shell?
 
 O **Shell** é uma camada do sistema operacional responsável por criar uma interface entre o usuário e o núcleo (kernel), geralmente por meio de um console ou terminal.
 
@@ -10,7 +10,7 @@ Além de interpretar comandos, o Shell também funciona como uma linguagem de pr
 
 Ao iniciar o Shell, ele procura as configurações globais do sistema e, em seguida, as configurações específicas do usuário. Por fim, ele exibe um indicador de comando, que segue o formato padrão:
 
-```
+```bash
 usuario@hostname:~/caminho$
 ```
 
