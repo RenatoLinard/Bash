@@ -1,47 +1,37 @@
-```markdown
-# Introdução ao Shell
+# O que é o Shell?
 
-O Shell é uma parte essencial do sistema operacional que permite aos usuários interagirem com o sistema. Ele serve como uma interface entre você e o núcleo do sistema operacional, normalmente através de um console ou terminal.
+O **Shell** é uma camada do sistema operacional responsável por criar uma interface entre o usuário e o núcleo (kernel), geralmente por meio de um console ou terminal.
 
-- O Shell é um **interpretador de comandos**, o que significa que ele pode executar comandos quando você os digita no terminal.
+> **Observação:** O sistema operacional possui vários componentes, sendo o núcleo (kernel) um deles.
 
-- Esses comandos podem ser inseridos interativamente, enquanto você digita no terminal, ou podem ser armazenados em um arquivo (script) para execução não interativa.
+O Shell atua como um interpretador de comandos, o que lhe confere a capacidade de interação com o sistema. Esses comandos podem ser fornecidos de duas maneiras: através de entrada padrão (interativamente, digitando comandos no terminal) ou por meio de um arquivo/script (modo não-interativo).
 
-- Além de interpretar comandos, o Shell também é uma linguagem de programação de alto nível, semelhante a linguagens como JavaScript. Isso significa que você pode escrever scripts para automatizar tarefas e controlar o fluxo de execução.
+Além de interpretar comandos, o Shell também funciona como uma linguagem de programação de alto nível, semelhante a linguagens como JavaScript. Ele possui recursos como manipulação de variáveis, estruturas de controle de fluxo, laços de repetição e muito mais, não ficando atrás de outras linguagens de programação.
 
-## Entendendo o Prompt
-
-Quando você inicia o Shell, ele exibe um indicador de comando conhecido como **prompt**. O prompt padrão geralmente se parece com isso:
+Ao iniciar o Shell, ele procura as configurações globais do sistema e, em seguida, as configurações específicas do usuário. Por fim, ele exibe um indicador de comando, que segue o formato padrão:
 
 ```
 usuario@hostname:~/caminho$
 ```
 
-- O til (~) representa o caminho da pasta pessoal do usuário, abreviado, que é equivalente a `/home/usuario/`. Se você estiver em uma subpasta, o caminho será exibido a partir do til, por exemplo: `~/Downloads/wallPapers/`.
+Neste caso, o til (~) representa o caminho para a pasta pessoal, abreviando `/home/renatolinard/`. Se você navegar para uma subpasta dentro da pasta pessoal, o caminho será relativo ao til, por exemplo: `~/Downloads/wallPapers/`. No entanto, se você estiver na raiz do sistema, o caminho será exibido da seguinte forma: `/usr/bin/`, sem o til.
 
-- Se você estiver na raiz do sistema, o caminho será exibido como `/usr/bin/`.
+Após o til (~), encontramos o símbolo de dólar ($), que indica que estamos executando o Shell como um usuário normal. Se entrarmos no modo root (usuário com privilégios elevados), o símbolo $ será substituído por um sustenido (#), indicando que estamos em uma área crítica, onde é possível realizar operações que podem afetar o sistema.
 
-- O símbolo de dólar ($) indica que você está executando o Shell como um usuário normal. Se você entrar no modo root (usuário com privilégios elevados), o símbolo de dólar será substituído por uma cerquilha (#).
+O **Bash** (Bourne Again Shell), um dos shells mais populares, inclui comandos *built-in* e utiliza utilitários. É importante dar preferência aos comandos *built-in*, pois eles tornam os comandos e scripts mais rápidos e eficientes, uma vez que estão altamente integrados ao sistema.
 
-## Comandos Integrados e Utilitários Externos
-
-O Shell possui **comandos integrados (built-in)** que são parte do próprio Shell e **utilitários externos** que são programas separados. É importante dar preferência aos comandos integrados, pois eles são mais eficientes e rápidos devido à sua integração com o Shell.
-
-Para listar os comandos integrados disponíveis, você pode usar o comando `help`:
+Para listar os comandos *built-in* disponíveis, podemos utilizar o comando `help` da seguinte forma:
 
 ```bash
 $ help
 ```
 
-Isso mostrará uma lista de todos os comandos internos do Shell. Você também pode usar o `help` com um comando específico para obter informações sobre ele.
+Isso listará todos os comandos *built-in* do sistema. Além disso, é possível usar o `help` com um comando específico para verificar se ele é *built-in* e também para exibir um pequeno manual de instruções do comando, caso ele seja *built-in*.
 
-## Identificando o Tipo de Shell
+Outra maneira de determinar o tipo de shell que estamos usando é através de duas abordagens:
 
-Você pode determinar o tipo de Shell que está em uso de duas maneiras:
+**Método 1:** Utilizando `echo $0`. A variável especial `$0` armazena o nome do programa em execução. No entanto, ao chamar esse comando de um script, ele mostrará o nome do script, não o shell utilizado.
 
-**Método 1:** Usando o comando `echo $0`. Essa variável especial armazena o nome do programa em execução, mas tenha cuidado ao usá-la com scripts, pois mostrará o nome do script em execução, não o Shell em uso.
+**Método 2:** Utilizando `echo $SHELL`. Esta variável de ambiente armazena o shell definido para o usuário logado e pode ser chamada de qualquer lugar, sempre contendo a informação do shell definido.
 
-**Método 2:** Usando o comando `echo $SHELL`. Esta variável de ambiente armazena o Shell definido para o usuário logado e pode ser acessada de qualquer lugar.
-
-Por fim, o comando `echo` é um comando interno do Shell que escreve argumentos na saída padrão, ou seja, o que é exibido na tela do terminal.
-```
+A título de curiosidade, o comando `echo` é um comando *built-in* do Shell, utilizado para escrever argumentos na saída padrão, ou seja, o que é exibido na tela do terminal.
