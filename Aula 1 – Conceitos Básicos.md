@@ -1,4 +1,4 @@
-# O que é o Shell?
+# O que é o Shell/Bash?
 
 O **Shell** é uma camada do sistema operacional responsável por criar uma interface entre o usuário e o núcleo (kernel), geralmente por meio de um console ou terminal.
 
