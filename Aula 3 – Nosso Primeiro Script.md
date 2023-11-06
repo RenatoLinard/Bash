@@ -1,73 +1,31 @@
-# Aula 3 - Nosso Primeiro Script
+Segue o texto revisado e reestruturado:
 
-Aqui estão algumas anotações pessoais sobre a terceira aula do curso básico de bash.
+# Nosso Primeiro Script
 
-## Etapas para Criar um Script
+## A Criação de um Script no Bash
 
-### 1. **Crie o Arquivo do Script**
+A criação de um arquivo script no Bash envolve basicamente três etapas: criação, edição e tornar o arquivo executável.
 
-   - Comece criando um arquivo de texto simples.
-   - Não use espaços, acentos ou caracteres especiais no nome do arquivo.
-   - Opcionalmente, adicione a extensão .sh para indicar que é um script.
-   
-### 2. **Edite o Arquivo do Script**
+1. **Criação do Arquivo:**
 
-   - Abra o arquivo em um editor de texto ou use o comando `nano`.
-   - Aqui é onde você escreverá o código do seu script.
+    - O nome do arquivo deve obedecer a algumas regras básicas para evitar problemas durante a criação e execução. São elas:
 
-### 3. **Torne o Arquivo Executável**
+        - Utilize apenas caracteres minúsculos de "a" a "z" sem acentuação.
 
-   - Use o comando `chmod +x nome_do_arquivo` para tornar o arquivo executável.
+        - Os únicos caracteres especiais permitidos são o hífen (-), o sublinhado (_) e o ponto (.).
 
-## Nome e Diretório
+        - Evite criar nomes de scripts com espaços entre palavras.
 
-- Pense bem no nome do arquivo, pois ele é crucial.
-- Evite usar espaços ou caracteres especiais no nome.
-- Extensões, como .sh, são úteis para identificar scripts.
-- Considere onde deseja criar o arquivo, preferencialmente em pastas no seu PATH ou caminhos personalizados.
+        - Extensões no final do nome do arquivo não possuem finalidade no shell. Se desejar usar uma extensão, isso não afetará a execução do script.
 
-## Criação de Arquivo pelo Terminal
+        - Seja organizado ao criar seus scripts de testes. Crie pastas e subpastas para cada assunto em estudo.
 
-- Você pode criar um arquivo diretamente no terminal usando comandos de redirecionamento.
-- Utilize `>` para criar um novo arquivo ou sobrescrever se já existir.
-- Use `>>` para acrescentar ao final de um arquivo existente.
+        - Caso a pasta onde o script está localizado não esteja configurada no PATH, lembre-se de chamá-los com o caminho completo. Por exemplo, se o script estiver no diretório onde você se encontra, utilize apenas `./meu_script`. Se estiver em um diretório diferente, use `~/Bash/meu_script`.
 
-## Escrevendo o Conteúdo do Script
+        - Se desejar atribuir o diretório no PATH, basta reescrever a variável PATH da seguinte forma: `PATH=$PATH:~/Bash/meu_script`. No entanto, lembre-se de que essa atribuição será temporária e será perdida quando a sessão do shell for encerrada. Para torná-la permanente, você deve configurar o PATH diretamente no arquivo `.bashrc` ou `.bash_profile` da seguinte maneira:
 
-- A primeira linha deve conter o interpretador de comandos, geralmente `#!/usr/bin/env bash`.
-- Definir o interpretador é fundamental para evitar erros.
-- Use comandos como `echo` para produzir saídas e executar tarefas.
+        ```bash
+        export PATH=$PATH:~/Bash/meu_script
+        ```
 
-## Tornando o Arquivo Executável
-
-- Garanta que seu arquivo seja executável usando `chmod +x nome_do_arquivo`.
-- Verifique as permissões com `ls -l nome_do_arquivo`.
-
-## Verificando se o Arquivo é Executável
-
-- Use o comando `test -x nome_do_arquivo; echo $?` para verificar a executabilidade.
-- Se for executável, o resultado será 0; caso contrário, será um número diferente.
-
-## Criando um Script para Criar Scripts
-
-- Você pode simplificar o processo de criação de scripts criando um script para isso.
-- Evite sobrescrever acidentalmente arquivos existentes.
-- Certifique-se de que há exatamente um argumento para o nome do arquivo.
-- Use `$#` para contar os argumentos passados.
-- Utilize `[[ -f $1 ]]` para verificar se o arquivo já existe.
-
-Sendo assim, vamos incluir mais uma linha antes das outras no nosso script:
-
-```bash
-#!/usr/bin/env bash
-
-[[ $# -ne 1 ]] && echo "Digite o nome de apenas um arquivo! Saindo..." && exit 1
-
-[[ -f $1 ]] && echo "Arquivo já existe! Saindo..." && exit 1
-
-echo '#!/usr/bin/env bash' >> $1
-chmod +x $1
-nano $1
-```
-
-Agora você tem as bases para começar a criar e gerenciar scripts em Bash. Divirta-se automatizando tarefas e simplificando seu trabalho! 😄🚀
+    - Para criar o arquivo, você pode utilizar o redirecionamento de saída da seguinte forma: `> meu_script`, onde basicamente você está direcionando a saída de um comando para dentro de um arquivo. Neste caso, não estamos definindo nenhum comando, portanto o arquivo é criado vazio.
