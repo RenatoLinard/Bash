@@ -1,5 +1,3 @@
-Segue o texto revisado e reestruturado:
-
 # Nosso Primeiro Script
 
 ## A Criação de um Script no Bash
