@@ -5,14 +5,11 @@ Este repositório contém anotações concisas que considerei relevantes para fu
 
 O curso original é gratuito e oferece uma qualidade de ensino e estrutura comparáveis a cursos pagos. Se você acha que o curso é valioso e deseja expressar sua gratidão, considere apoiar financeiramente o instrutor **Blau Araújo** de acordo com sua generosidade.
 
-- **Conceitos básicos**
-  - [clique aqui](https://github.com/RenatoLinard/Bash/blob/main/Aula%201%20%E2%80%93%20Conceitos%20B%C3%A1sicos.md)
+- **Conceitos básicos**[clique aqui](https://github.com/RenatoLinard/Bash/blob/main/Aula%201%20%E2%80%93%20Conceitos%20B%C3%A1sicos.md)
 
-- **Antes do primeiro script**
-  - [clique aqui](https://github.com/RenatoLinard/Bash/blob/main/Aula%202%20%E2%80%93%20Antes%20do%20Primeiro%20Script.md)
+- **Antes do primeiro script**[clique aqui](https://github.com/RenatoLinard/Bash/blob/main/Aula%202%20%E2%80%93%20Antes%20do%20Primeiro%20Script.md)
 
-- **Nosso primeiro script**
-  - [clique aqui](https://github.com/RenatoLinard/Bash/blob/main/Aula%203%20%E2%80%93%20Nosso%20Primeiro%20Script.md)
+- **Nosso primeiro script**[clique aqui](https://github.com/RenatoLinard/Bash/blob/main/Aula%203%20%E2%80%93%20Nosso%20Primeiro%20Script.md)
 
 
 ## Sobre o Curso
